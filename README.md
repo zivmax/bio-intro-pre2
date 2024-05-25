@@ -27,4 +27,5 @@
 - `outline.md` 是我们的内容大纲
 - `slides.md` 是我们的 Slides 源码 (依然使用 Marp 系统)
 - `whisper` 目录存放的参考视频的 Whisper 转录文本 (便于利用 GPT 和快速查阅), 可以随时让我添加别的视频的转录文本
-- `wiki.md` 是我们的 Wiki 文档, 里面依然是一个知识库.
+- `wiki.md` 是我们的 Wiki 文档, 里面依然是一个知识库
+- `script.md` 是我们的讲稿
