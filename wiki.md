@@ -168,18 +168,18 @@
   [异化作用-Wiki](https://zh.wikipedia.org/zh-sg/%E5%BC%82%E5%8C%96%E4%BD%9C%E7%94%A8)
 
 
-### 双盲试验
+### 随机双盲试验
 
 - 内容：
-  双盲（double blind）是一种更加严格的试验方法，通常适用于以人为研究对象的试验（human subjects），旨在消除可能出现的试验者和参与者意识中的主观偏差（subjective bias）和个人偏好（personal preferences）。在大多数情况下，双盲试验要求达到非常高的科学严格程度。
+  双盲（double blind）是一种更加严格的试验方法，通常适用于以人为研究对象的试验（human subjects），旨在消除可能出现的试验者和参与者意识中的主观偏差（subjective bias）和个人偏好（personal preferences）。在大多数情况下，随机双盲试验要求达到非常高的科学严格程度。
 
-  在双盲试验中：
+  在随机双盲试验中：
 
   1. 试验者和参与者都不知道哪些参与者属于对照组（control group）、哪些属于试验组（experimental group）。只有在所有数据被记录完毕之后（在有些情况下是分析完毕之后），试验者才能知道哪些参与者属于哪些组。
 
-  2. 采用双盲试验是为了减少偏见（prejudices）和无意识地暗示（unintentional physical cues）对试验结果的影响。这种方法确保了试验结果的客观性和可靠性。
+  2. 采用随机双盲试验是为了减少偏见（prejudices）和无意识地暗示（unintentional physical cues）对试验结果的影响。这种方法确保了试验结果的客观性和可靠性。
 
-  3. 随机分配（Random assignment）到对照组或者试验组是双盲试验中至关重要的一部分。确认哪些受试者属于哪些组的信息交由第三方保管，并且在研究结束之前不能告知研究者。
+  3. 随机分配（Random assignment）到对照组或者试验组是随机双盲试验中至关重要的一部分。确认哪些受试者属于哪些组的信息交由第三方保管，并且在研究结束之前不能告知研究者。
 
 - 参考：
   [双盲试验-MBA智库](https://wiki.mbalib.com/wiki/%E5%8F%8C%E7%9B%B2%E8%AF%95%E9%AA%8C)
