@@ -67,7 +67,7 @@ style: |
 
 </div>
 
-![bg right:40%](image/slides/hyperglycemia.jpg)
+![bg right:40%](image/slides/2-hyperglycemia.jpg)
 
 <!-- 
 但是这两种人，血液中都有无法控制的高血糖，以至于超出肾脏的处理能力，进而导致尿液中也出现糖。因此这两类人都属于 1500 年以前就有所记载的糖尿病患者。
@@ -87,7 +87,7 @@ style: |
 *一型糖尿病患者*
 </div>   
 
-![w:300](image/slides/type1_patient.png)
+![w:300](image/slides/2-type1_patient.png)
 </div>
 
 
@@ -97,7 +97,7 @@ style: |
 *二型糖尿病患者*
 </div>
 
-![w:300](image/slides/type2_patient.png)
+![w:300](image/slides/2-type2_patient.png)
 </div>
 
 
@@ -118,7 +118,7 @@ style: |
 
 - 班廷因此成为诺贝尔生理医学奖有史以来最年轻的得主。
 
-![bg right:40%](image/slides/banting_profile.jpg)
+![bg right:40%](image/slides/2-banting_profile.jpg)
 
 <!-- 
 糖尿病虽然有上千年历史，但直到 1921 年，一直是一种患上就必死的绝症。其发病率不亚于其他绝症，比如癌症。医院的糖尿病病区充满了绝望的患者和家属，直接在那等死。直到 1921 年，多伦多大学的弗雷德里克·班廷和他的学生从前人的结果中得到启发，从狗的胰腺成功分离出胰岛素后，糖尿病才有了治疗的方法，而不再是必死的绝症。班廷因此成为诺贝尔生理学医学奖有史以来最年轻的得主。
@@ -153,7 +153,7 @@ style: |
 
 - 血糖得到控制
 
-![bg right:50% 110%](image/slides/glycemia_and_insulin.png)
+![bg right:50% 110%](image/slides/2-glycemia_and_insulin.png)
 
 <!--  
 经过类似诸多关键实验的证明，血糖升高导致胰岛素释放，增加肝脏储存吸收的糖分，肌肉和组织细胞摄取更多糖分而降低血糖。这种理解逐渐确立，显示胰腺和肝脏在控制血糖中的作用。随着人的三餐进食，血糖迅速升高，同样的胰岛素也迅速升高，然后把血糖降下来。糖尿病和胰岛素的故事似乎已经清晰地阐明了。事实上，真正的糖尿病机制还有很多未解之谜，而我们想要的身体调控肥胖的秘密更是千里之行，始于足下。
@@ -182,7 +182,7 @@ style: |
 - 得到控制每单位血糖需要多少单位胰岛素
 
 
-![bg right:40%](image/slides/Sir-Harold-Percival-Harry-Himsworth.webp)
+![bg right:40%](image/slides/2-Sir-Harold-Percival-Harry-Himsworth.webp)
 
 
 <!-- 
@@ -198,7 +198,7 @@ style: |
 
 - 二型糖尿病：胰岛素抵抗，胰岛素分泌正常
 
-![bg right:40% 90%](image/slides/insulin_sen_and_insen.png)
+![bg right:40% 90%](image/slides/2-insulin_sen_and_insen.png)
  
 <!-- 
 造成此敏感性降低的因素，Himsworth 教授当时称之为“某未知因素”。Himsworth 教授不仅跨时代地提出了糖尿病分型的医学病理基础，还用实验和数据证明了不同的糖尿病存在不同的胰岛素敏感性问题。Himsworth 教授的这个实验思路成为之后测量胰岛素抵抗的黄金标准。现在诊断糖尿病的糖耐量实验，其思路也大同小异：在口服一定葡萄糖后，在定点时间测量其血糖和胰岛素的变化，通过血糖变化和胰岛素分泌的量来测出糖尿病的情况。当他进食葡萄糖后，如果血糖控制得很好，那么就没有糖尿病。但如果血糖控制不好，比如血糖值很高，同时分泌的胰岛素也很多，说明他对胰岛素的敏感性很低，降低同样水平的血糖需要很多胰岛素，那么他就是一个二型糖尿病。
@@ -217,7 +217,7 @@ style: |
 *一型糖尿病患者*
 </div>   
 
-![h:350 w:600](image/slides/type1_flow.png)
+![h:350 w:600](image/slides/2-type1_flow.png)
 </div>
 
 <div>
@@ -226,7 +226,7 @@ style: |
 *二型糖尿病患者*
 </div>
 
-![h:350 w:600](image/slides/type2_flow.png)
+![h:350 w:600](image/slides/2-type2_flow.png)
 </div>
 
 
@@ -250,7 +250,7 @@ style: |
 
 - 实验显示胰岛素和血糖高点同时出现
 
-![bg right:40% 100%](image/slides/glucose_insulin_a_day.png)
+![bg right:40% 100%](image/slides/2-glucose_insulin_a_day.png)
 
 <!-- 
 普遍认为，胰腺的β细胞通过血糖进入细胞后的一系列反应，让胰岛素随着血液的浓度释放，从而达到调控血糖的目的。
@@ -268,7 +268,7 @@ style: |
 - 口服葡萄糖和静脉注射葡萄糖
 - 血糖和胰岛素的变化不同
 
-![bg right:40% 100%](image/slides/oral_infusion_differ.png)
+![bg right:40% 100%](image/slides/2-oral_infusion_differ.png)
 
 <!-- 
 还有一个奇怪现象是，同一个研究对象无论口服葡萄糖还是静脉注射相同水平的葡萄糖，最终在体内达到相同的血糖，但胰岛素分泌量却不同，这和之前的理论相矛盾，被抑制的血糖量一样，但胰岛素分泌量不一样。这是什么原因呢？唯一解释是口服和静脉注射不同。口服不同在于什么呢？就是胃肠。答案似乎呼之欲出，一定有什么因素来自胃肠受到食物刺激，从而影响胰岛素的分泌。但到底是什么，却一直找不到让人信服的答案。
@@ -287,7 +287,7 @@ GLP（Glucagon-like peptide）
 - 胰高血糖素样肽（类似胰高血糖素的多肽）
 - 直接影响胰岛素的释放
 
-![bg right:40% 100%](image/slides/gip_effect.png)
+![bg right:40% 100%](image/slides/2-gip_effect.png)
 
 <!-- 
 直到六七十年代，随着分子生物学的发展，特别是放射免疫分析和酶联免疫等方法的发明，让人体内的各种蛋白多肽激素可以被分离和定量研究，科学家们才开始摸到一点门道。1973 年，一篇重磅文章证明了这一点：将分离出的、保持活性的胃肠分泌物 GIP 给健康受试者，直接观察到胰岛素分泌的明显变化，证明了胃肠分泌物能够直接影响胰岛素的释放。随后，类似胰高血糖素的免疫活性物质 GLP 也被发现，并证明了其促进胰岛素分泌的活性。更妙的是，这些分泌物在促进胰岛素分泌时，同时需要血糖水平的参与。也就是说，只有你在高血糖的时候，这些分泌物才能促进胰岛素分泌，它不存在用胰岛素降低血糖时常见的把患者血糖弄得太低，甚至可能危及生命的风险。这点在其作为药物的发展中起到了非常大的作用，我们之后再提。
