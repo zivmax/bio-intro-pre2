@@ -119,7 +119,12 @@
 
 - [Science's 2023 Breakthrough of the Year](https://www.science.org/content/article/breakthrough-of-the-year-2023)
 
+- GLP抑制小鼠食欲 [A role for glucagon-like peptide-1 in the central regulation of feeding](https://www.nature.com/articles/379069a0)
+- GLP抑制人类食欲 [Glucagon-like peptide-1 promotes satiety and reduces food intake in patients with diabetes mellitus type 2](https://journals.physiology.org/doi/full/10.1152/ajpregu.1999.276.5.R1541?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org)
 
+- GLP受体广泛存在于人体各种器官内，如大脑 [Gastric inhibitory polypeptide receptor, a member of the secretin-vasoactive intestinal peptide receptor family, is widely distributed in peripheral organs and the brain](https://academic.oup.com/endo/article/133/6/2861/3036069?login=true)
+- 保护心血管[Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity](https://www.nejm.org/doi/10.1056/NEJMoa2306963?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)
+- 治疗阿尔茨海默病 [The mechanism and efficacy of GLP-1 receptor agonists in the treatment of Alzheimer’s disease](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9714676/)
 
 # 疑问的GLP
 
