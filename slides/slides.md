@@ -38,20 +38,25 @@ style: |
 
 ---
 
-![](image/slides/1-wegory1.png)
+<div style="text-align:center">
+
+![h:400](image/slides/1-wegory1.png)
 ![w:450](image/slides/1-wegory2.png)
+
+</div>
+
 <!--
 众人惊呼，发现这个Wegovy正是最近被大肆吹捧的减肥神药，其主要成分是司美格鲁肽，而同样成分的药物Ozempic用于治疗糖尿病。由于它被疯狂滥用，在美国引起了不小的风波。
 -->
 ---
-![](image/slides/1-shenpi.jpg)
+![bg fit 60%](image/slides/1-shenpi.jpg)
 <!--
 去年上半年，国内也完成了此药治疗肥胖的三期临床实验，迅速进入审批上市阶段。
 -->
 
 ---
 ![w:700](image/slides/1-yibao1.jpg)
-![bg right:50% 100%](image/slides/1-yibao2.jpg )
+![bg right:50% 90%](image/slides/1-yibao2.jpg )
 
 <!--
 估计批准的可能性非常高，因为此药之前已经针对糖尿病获批上市，甚至纳入了医保。所以，我们很快就能吃上和世界首富同样的保健减肥药，彻底告别肥胖的烦恼吗？
@@ -397,11 +402,11 @@ style: |
 # 糖尿病的病理学史
 ## 全新的一环：胃肠道
 
-GIP（Gastric inhibitory polypeptide）
+**GIP（Gastric inhibitory polypeptide）**
 - 抑胃肽
 - 直接影响胰岛素的释放
 
-GLP（Glucagon-like peptide）
+**GLP（Glucagon-like peptide）**
 - 胰高血糖素样肽（类似胰高血糖素的多肽）
 - 直接影响胰岛素的释放
 
@@ -425,6 +430,7 @@ GLP（Glucagon-like peptide）
 - 作用范围广
     - 广泛存在于外周神经、脑、肾、心、肝、骨骼肌
 
+![bg right:50% 100%](image/slides/3-FunctionsOfGLP-1.png)
 
 
 <!--
@@ -436,7 +442,6 @@ GLP（Glucagon-like peptide）
 
 在针对GLP的实验刚开始时，GLP1受体就被发现广泛存在于外周神经和大脑。动物实验发现其广泛存在于脑、肾、心、肝和骨骼肌。也就是说，GLP的作用地方很多，不只是胰腺。这些发现为GLP受体激动剂在临床实验中出现各种神奇作用奠定了基础。
 -->
-![bg right](image/slides/3-GLP-1作用范围.jpg)
 
 ---
 
