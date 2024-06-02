@@ -381,7 +381,7 @@ GLP（Glucagon-like peptide）
 
 ---
 
-![bg left](image/slides/3-sem保护心血管.png)
+![bg right](image/slides/3-sem保护心血管.png)
 
 - 心肌病问卷临床总结评分KCCQ-CSS
   - higher scores indicating fewer symptoms and physical limitations
@@ -396,7 +396,7 @@ GLP（Glucagon-like peptide）
 
 ---
 
-![bg left:50% 2023breakthrough](image/slides/3-2023breakthrough.png)
+![bg right:50% 2023breakthrough](image/slides/3-2023breakthrough.png)
 - GLP-1：2023年的年度科学突破
 
 <!--
@@ -410,7 +410,7 @@ GLP（Glucagon-like peptide）
 
 ---
 
-![bg left:60% 停药后bmi反弹](image/slides/3-停药后bmi反弹.jpg)
+![bg right:60% 停药后bmi反弹](image/slides/3-停药后bmi反弹.jpg)
 
 - 停药后bmi反弹
 
