@@ -326,11 +326,32 @@ GLP（Glucagon-like peptide）
 而GLP究竟为什么能减肥呢？其作用机制，来自中枢神经对饱腹感等感觉的干涉。
 -->
 
+# GLP 受体激动剂
 ## 干涉饱腹感
 
 
 
-![bg width:11cm](image/slides/3-GLP抑制小鼠食欲.png)
+
+![bg width:11cm]()
+
+
+<div style="display: flex; justify-content: space-around; margin-left: -10px;">
+
+<div style="margin-right:-200px;"> 
+
+![h:230](image/slides/3-GLP抑制小鼠食欲.png)
+</div>
+
+<div>
+
+![h:230](image/slides/3-GLP,EXE影响小鼠食欲.png)
+</div>
+
+</div>
+
+- GLP-1
+- sal：生理盐水
+- exe：特异性GLP-1受体拮抗剂exendin ，阻断GLP-1对食物摄入的抑制作用
 
 <!--
 
@@ -338,28 +359,6 @@ GLP（Glucagon-like peptide）
 
 -->
 
-![bg width:11cm](image/slides/3-GLP,EXE影响小鼠食欲.png)
-
-
-
-
-\
-\
-\
-\
-\
-\
-\
-\
-\
-
-
-
-
-
-- GLP-1
-- sal：生理盐水
-- exe：特异性GLP-1受体拮抗剂exendin ，阻断GLP-1对食物摄入的抑制作用
 
 <!--
 
@@ -381,6 +380,9 @@ GLP（Glucagon-like peptide）
 
 ---
 
+# GLP 受体激动剂
+## 保护心血管
+
 ![bg right](image/slides/3-sem保护心血管.png)
 
 - 心肌病问卷临床总结评分KCCQ-CSS
@@ -396,8 +398,11 @@ GLP（Glucagon-like peptide）
 
 ---
 
-![bg right:50% 2023breakthrough](image/slides/3-2023breakthrough.png)
-- GLP-1：2023年的年度科学突破
+# GLP 受体激动剂
+## GLP-1：2023 年度科学突破
+
+
+![bg right:40% 100% 2023breakthrough](image/slides/3-2023breakthrough.png)
 
 <!--
 
@@ -405,14 +410,12 @@ GLP（Glucagon-like peptide）
 -->
 
 
-
-
-
 ---
 
-![bg right:60% 停药后bmi反弹](image/slides/3-停药后bmi反弹.jpg)
+# GLP 受体激动剂
+## 停药后bmi反弹
 
-- 停药后bmi反弹
+![bg right:60% 100%](image/slides/3-停药后bmi反弹.jpg)
 
 <!--
 现在回到我们最初的司美格鲁肽作为减肥药批准上市的临床实验.
