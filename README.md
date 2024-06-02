@@ -7,6 +7,7 @@
 ├── image
 ├── outline.md
 ├── slides.md
+├── script.md
 ├── whisper
 │   └── output
 │       ├── large-v3
