@@ -436,7 +436,7 @@ GLP（Glucagon-like peptide）
  -->
 
  ---
-![bg width:25cm](FunctionsOfGLP-1.png)
+![bg width:25cm](image/slides/3-FunctionsOfGLP-1.png)
 
 <!--
 胰岛素的发现让全球数百万糖尿病人获救，而这次GLP1受体激动剂的发掘可能会影响的不止糖尿病患者，而是全人类。GLP1是否真的会如抗生素发现一样，彻底改变我们的医疗健康和生活？或者因为身体的过度调节，出现长时间后的各种副作用，回归为小部分糖尿病人使用的药呢？也许只有数年或数十年后，一般大众使用得出的数据才能看出来。
