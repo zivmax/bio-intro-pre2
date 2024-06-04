@@ -3,8 +3,8 @@ marp: true
 theme: default
 paginate: true
 math: katex
-footer: 高圣涵、唐林峥、张语晴
 header: 生命科学导论 24SP
+footer: 高圣涵、唐林峥、张语晴
 style: |
   video::-webkit-media-controls {
     will-change: transform;
