@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Pre Wiki</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension marp-team.marp-vscode */
+#__marp-vscode {
+  all: revert;
+}
+
+/* Override VS Code default CSS rules reverting to initial
+   https://github.com/microsoft/vscode/blob/master/src/vs/workbench/contrib/webview/browser/pre/main.js#L53 */
+body.marp-vscode {
+  padding: 0;
+}
+
+body.marp-vscode img {
+  max-width: unset;
+  max-height: unset;
+}
+
+body.marp-vscode a,
+body.marp-vscode a:hover,
+body.marp-vscode code {
+  color: unset;
+}
+
+body.marp-vscode blockquote {
+  background: unset;
+  border-color: unset;
+}
+
+@media screen {
+  body.marp-vscode {
+    overflow-y: scroll;
+  }
+
+  #__marp-vscode [data-marp-vscode-slide-wrapper] {
+    margin: 20px;
+  }
+
+  #__marp-vscode svg[data-marpit-svg] {
+    box-shadow: 0 5px 10px rgb(0 0 0 / 25%);
+    display: block;
+    margin: 0;
+  }
+
+  /* Based on https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+  #code-csp-warning {
+    background-color: #444;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 25%);
+    color: white;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    margin: 16px;
+    padding: 6px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    word-wrap: break-word;
+  }
+
+  #code-csp-warning:hover {
+    text-decoration: none;
+    background-color: #007acc;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 25%);
+  }
+}
+
+@media print {
+  body.marp-vscode #code-csp-warning {
+    display: none;
+  }
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="pre-wiki">Pre Wiki</h1>
+<h2 id="concepts-index">Concepts Index：</h2>
+<h3 id="机构">机构</h3>
+<ul>
+<li><strong>EMA (European Medicine Administration)</strong>：欧洲药品管理局</li>
+<li><strong>FDA（Food and Drug Administration）</strong>：美国食品药品监督管理局。</li>
+</ul>
+<h3 id="激素和药物">激素和药物</h3>
+<ul>
+<li><strong>胰岛素:</strong>  由胰腺分泌的一种激素，能帮助身体利用葡萄糖作为能量。</li>
+<li><strong>GLP-1 (胰高血糖素样肽-1):</strong>  由肠道分泌的一种激素，能促进胰岛素分泌，抑制食欲。</li>
+<li><strong>GLP-1 受体激动剂:</strong>  一类模拟 GLP-1 作用的药物，例如 <strong>司美格鲁肽 (Semaglutide)</strong>。
+<ul>
+<li><strong>Ozempic:</strong>  司美格鲁肽的一种剂型，用于治疗二型糖尿病。</li>
+<li><strong>Wegovy:</strong>  司美格鲁肽的一种剂型，用于治疗肥胖。</li>
+</ul>
+</li>
+<li><strong>GIP (葡萄糖依赖性促胰岛素肽):</strong>  由肠道分泌的一种激素，能促进胰岛素分泌。</li>
+</ul>
+<h3 id="生理学和病理学">生理学和病理学</h3>
+<ul>
+<li><strong>胰岛素敏感性 (Insulin Sensitivity)</strong>: 身体对胰岛素的反应程度。</li>
+<li><strong>胰岛素抵抗（Insulin Resistance）</strong>：身体对胰岛素的反应降低，需要更多的胰岛素来控制血糖。</li>
+<li><strong>糖尿病:</strong> 一种代谢性疾病，特征是血液中的葡萄糖水平过高。
+<ul>
+<li><strong>一型糖尿病:</strong> 胰腺不能产生足够的胰岛素。患者通常体型偏瘦。</li>
+<li><strong>二型糖尿病:</strong> 身体对胰岛素不敏感，无法有效利用胰岛素。患者通常体型偏胖。</li>
+</ul>
+</li>
+<li><strong>代谢性疾病:</strong> 一种影响人类（或动物）细胞生产能量的障碍，又称为新陈代谢失调症。</li>
+</ul>
+<h3 id="其他医学和生物学概念">其他医学和生物学概念</h3>
+<ul>
+<li><strong>肠促胰素（Incretin）</strong>：一类肠道激素，促进胰岛素分泌。</li>
+<li><strong>胃肠分泌物（Gastrointestinal Secretions）</strong>：如GIP和GLP，影响胰岛素分泌。</li>
+<li><strong>肝糖原（Glycogen）</strong>：肝脏储存的糖原。</li>
+<li><strong>胰腺（Pancreas）</strong>：分泌胰岛素和其他激素的器官。</li>
+<li><strong>β细胞（Beta Cells）</strong>：胰腺中的细胞，分泌胰岛素。</li>
+<li><strong>同化激素（Anabolic Hormone）</strong>：促进合成代谢的激素，如胰岛素。</li>
+<li><strong>异化作用（Catabolic Process）</strong>：分解代谢过程。</li>
+<li><strong>安慰剂效应:</strong>  接受了没有治疗效果的药物或治疗后，病情却有所好转的现象。</li>
+</ul>
+<h3 id="实验设计和统计学">实验设计和统计学</h3>
+<ul>
+<li><strong>生活干预（Lifestyle Intervention）</strong>：包括节食和锻炼等行为改变。</li>
+<li><strong>随机双盲实验</strong>：一种实验设计，将受试者随机分配到试验组和对照组，受试者和研究人员都不知道谁在接受哪种治疗。</li>
+</ul>
+<h2 id="concepts-details">Concepts Details</h2>
+<h3 id="血糖浓度调节机制-课本">血糖浓度调节机制 (课本)</h3>
+<ul>
+<li>
+<p><strong>内容</strong>:</p>
+<blockquote>
+<p><img src="file:///c:\Users\USER\Desktop\bio-pre2\wiki\image\wiki\%E8%A1%80%E7%B3%96%E8%B0%83%E8%8A%82.png" alt=""></p>
+</blockquote>
+<ol>
+<li>
+<p><strong>正常血糖浓度</strong>：</p>
+<ul>
+<li>成人血液中葡萄糖的正常质量浓度约为1 mg/mL。</li>
+<li>饥饿时，血液中的葡萄糖浓度较低。</li>
+<li>饭后，血糖浓度升高。</li>
+</ul>
+</li>
+<li>
+<p><strong>胰岛素的作用</strong>：</p>
+<ul>
+<li>刚进食后，血糖浓度增加的信号会对胰腺中的β胰岛细胞产生有效刺激，促进其分泌胰岛素（insulin）。</li>
+<li>胰岛素能促进肌细胞和肝细胞吸收利用葡萄糖并将其合成为糖原。</li>
+<li>胰岛素还能促进脂肪组织利用葡萄糖来制造脂肪。</li>
+<li>因此，血糖浓度下降，血糖浓度降低的信号反过来又抑制了胰岛素的分泌。</li>
+</ul>
+</li>
+<li>
+<p><strong>饥饿状态下的调节</strong>：</p>
+<ul>
+<li>饥饿时，血糖浓度过低的信号会刺激胰腺中的<strong>α胰岛细胞分泌胰高血糖素</strong>（glucagon），同时刺激<strong>肾上腺髓质分泌肾上腺素</strong>。</li>
+<li>在这两种激素的作用下，肝和肌肉中的糖原被分解为葡萄糖。</li>
+<li>另外，肾上腺素还能促进脂肪分解，肝细胞可以利用脂肪分解产生的甘油生成葡萄糖。</li>
+</ul>
+</li>
+<li>
+<p><strong>长时间饥饿的调节</strong>：</p>
+<ul>
+<li>经过较长时间的饥饿，肾上腺素连续刺激<strong>下丘脑产生促肾上腺皮质激素</strong>（adrenocorticotropic hormone）释放因子并作用于腺垂体，使<strong>腺垂体产生促肾上腺皮质激素</strong>。</li>
+<li>促肾上腺皮质激素刺激<strong>肾上腺皮质分泌氢化可的松</strong>。</li>
+<li><strong>氢化可的松可以促进肝将蛋白质转化为葡萄糖</strong>，以临时补偿血液中的葡萄糖，暂时维持体内的能量供应。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>参考</strong>:</p>
+<blockquote>
+<p>血液中葡萄糖浓度水平的稳定对于维持身体各组织
+的能量供给十分重要。激素在调节血糖浓度平衡方面是
+这样发挥作用的：成人血液中葡萄糖的正常质量浓度在
+1 mg/mL 左右，饥饿时血液中的葡萄糖浓度较低，饭后
+血糖浓度升高。刚进食后，血糖浓度增加的信号会对胰
+腺中的 β 胰岛细胞产生有效刺激，促进其分泌胰岛素
+（insulin）。胰岛素能促进肌细胞和肝细胞吸收利用葡萄
+糖并将其合成为糖原，也能促进脂肪组织利用葡萄糖来
+制造脂肪，因此血糖浓度下降，血糖浓度降低的信号反
+过来又抑制了胰岛素的分泌。饥饿时，血糖浓度过低的
+信号又会刺激胰腺中的α胰岛细胞分泌胰高血糖素
+（glucagon），同时刺激肾上腺髓质分泌肾上腺素，在这两
+种激素的作用下，肝和肌肉中的糖原被分解为葡萄糖。另
+外，肾上腺素还能促进脂肪分解，肝细胞可以利用脂肪分
+解产生的甘油生成葡萄糖。在上述内分泌腺及激素共同作
+用的调节下，人体血糖浓度在正常水平上下波动，相对平
+衡，从而保证了体内各组织代谢的能量供应（图 9-41）。
+另外，经过较长时间的饥饿，肾上腺素连续刺激下丘脑产
+生促肾上腺皮质激素（adrenocorticotropic hormone）释放
+因子并作用于腺垂体，使腺垂体产生促肾上腺皮质激素，
+后者刺激肾上腺皮质分泌氢化可的松。氢化可的松可以
+促进肝将蛋白质转化为葡萄糖，以临时补偿血液中的葡
+萄糖，暂时维持体内的能量供应。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="血糖浓度调节机制-glp-gip">血糖浓度调节机制 (GLP-GIP)</h3>
+<ul>
+<li>
+<p>内容：</p>
+<ol>
+<li>胰高血糖素（Glucagon）</li>
+</ol>
+<p><strong>分泌来源：</strong></p>
+<ul>
+<li>由胰腺的胰岛细胞（α细胞）分泌。</li>
+</ul>
+<p><strong>作用机制：</strong></p>
+<ul>
+<li>胰高血糖素在夜间及两餐之间分泌，主要作用是维持体内糖和燃料的平衡。</li>
+<li>它促使肝脏分解糖原储备，生成葡萄糖和酮体。</li>
+<li>还促进脂肪细胞分解脂肪，提供额外的燃料。</li>
+</ul>
+<p><strong>糖尿病患者的特殊情况：</strong></p>
+<ul>
+<li>糖尿病患者在进餐时，胰高血糖素水平异常升高，导致餐后血糖水平上升。</li>
+</ul>
+<ol start="2">
+<li>GLP-1（胰高血糖素样肽1）、GIP（葡萄糖依赖性促胰岛素多肽）和胰岛淀粉样肽（Amylin）</li>
+</ol>
+<p><strong>分泌来源：</strong></p>
+<ul>
+<li>GLP-1和GIP由肠道分泌。</li>
+<li>胰岛淀粉样肽与胰岛素一起由胰岛β细胞分泌。</li>
+</ul>
+<p><strong>作用机制：</strong></p>
+<ul>
+<li>GLP-1和GIP是肠促胰岛素分泌激素，<strong>促进胰岛β细胞分泌胰岛素，减少α细胞分泌胰高血糖素</strong>。</li>
+<li>GLP-1还减慢胃排空，使大脑感到饱胀和满足。</li>
+<li>胰岛淀粉样肽与GLP-1作用相似，减少胰高血糖素水平，降低肝脏的葡萄糖产量，减缓胃排空。</li>
+</ul>
+<p><strong>糖尿病患者的特殊情况：</strong></p>
+<ul>
+<li>1型糖尿病患者由于β细胞功能不足，导致胰岛素和胰岛淀粉样肽缺失，GLP-1功能异常，进餐时胰高血糖素不受抑制，导致饭后高血糖。</li>
+</ul>
+<ol start="3">
+<li>肾上腺素（Epinephrine）、皮质醇（Cortisol）和生长激素（Growth Hormone）</li>
+</ol>
+<p><strong>分泌来源：</strong></p>
+<ul>
+<li>肾上腺素由神经末梢和肾上腺分泌。</li>
+<li>皮质醇由肾上腺分泌。</li>
+<li>生长激素由脑垂体分泌。</li>
+</ul>
+<p><strong>作用机制：</strong></p>
+<ul>
+<li>这些激素与胰高血糖素一起，被称为“应激”或“葡萄糖反向调节激素”，它们通过不同途径使血糖升高。</li>
+<li><strong>肾上腺素：</strong> 促进肝脏糖原分解，生成葡萄糖，并促进脂肪分解，提供糖和酮体。</li>
+<li><strong>皮质醇：</strong> 增强肝脏的葡萄糖生产，使脂肪和肌肉细胞对胰岛素产生抵抗。在应激情况下，皮质醇水平升高，导致胰岛素抵抗。</li>
+<li><strong>生长激素：</strong> 反向调节胰岛素对肌肉和脂肪细胞的作用，高水平的生长激素导致胰岛素抵抗。</li>
+</ul>
+<p><strong>糖尿病患者的特殊情况：</strong></p>
+<ul>
+<li>2型糖尿病患者由于胰岛素抵抗，可能需要更多的药物或胰岛素来控制血糖。</li>
+</ul>
+</li>
+</ul>
+<h3 id="i-type-糖尿病">I-Type 糖尿病</h3>
+<ul>
+<li>
+<p>内容：
+1型糖尿病的发生，是因为<strong>生产胰岛素的细胞数量减少或功能不全</strong>, 这种细胞叫胰岛B细胞。B细胞损伤导致体内胰岛素分泌不足或消失。多数1型糖尿病患者有自身免疫基础，<strong>患者自身的免疫系统错误地攻击并破坏B细胞</strong>。因为胰岛素对维持生命至关重要，所以不足的胰岛素一定要补充。补充胰岛素可以用注射器或胰岛素泵来皮下注射。</p>
+</li>
+<li>
+<p>参考：
+<a href="https://dtc.ucsf.edu/zh-hans/%e7%b3%96%e5%b0%bf%e7%97%85%e5%88%86%e5%9e%8b/1%e5%9e%8b%e7%b3%96%e5%b0%bf%e7%97%85/%e4%ba%86%e8%a7%a31%e5%9e%8b%e7%b3%96%e5%b0%bf%e7%97%85/%e4%bb%80%e4%b9%88%e6%98%af1%e5%9e%8b%e7%b3%96%e5%b0%bf%e7%97%85/">Diabetes Education Online</a></p>
+</li>
+</ul>
+<h3 id="ii-type-糖尿病">II-Type 糖尿病</h3>
+<ul>
+<li>
+<p>内容：
+2型糖尿病的<strong>胰岛素抵抗是指胰岛素给细胞的信号减弱</strong>，导致肌肉和脂肪细胞的葡萄糖摄取减少，胰岛素介导的细胞内活动减弱。除了胰岛素抵抗的问题，胰腺中的β细胞生产和分泌胰岛素减少。除了有胰岛素抵抗外，胰岛素生成细胞（胰腺β 细胞）又有胰岛素生成和分泌的缺陷。</p>
+</li>
+<li>
+<p>参考：
+<a href="https://dtc.ucsf.edu/zh-hans/%e7%b3%96%e5%b0%bf%e7%97%85%e5%88%86%e5%9e%8b/2%e5%9e%8b%e7%b3%96%e5%b0%bf%e7%97%85/%e4%ba%86%e8%a7%a32%e5%9e%8b%e7%b3%96%e5%b0%bf%e7%97%85/%e4%bb%80%e4%b9%88%e6%98%af2%e5%9e%8b%e7%b3%96%e5%b0%bf%e7%97%85/">Diabetes Education Online</a></p>
+</li>
+</ul>
+<h3 id="β细胞">β细胞</h3>
+<ul>
+<li>
+<p>内容：
+胰岛B细胞也称为胰岛β细胞（英语：Beta cells、β cells），是一类位于胰岛中的细胞，主要功能是分泌可以降低血糖浓度的胰岛素，数量占到胰岛中细胞数量的60-80%。1型糖尿病即由胰岛B细胞功能异常导致</p>
+</li>
+<li>
+<p>参考：
+<a href="https://zh.wikipedia.org/zh-cn/%E8%83%B0%E5%B3%B6B%E7%B4%B0%E8%83%9E">胰岛B细胞-Wiki</a></p>
+</li>
+</ul>
+<h3 id="异化作用其实就是代谢">异化作用（其实就是代谢）</h3>
+<ul>
+<li>
+<p>内容：
+异化作用（英语：Catabolism），又称作分解代谢，是生物的新陈代谢途径，将分子分解成更小的单位，并被氧化释放能量的过程，或用于其他合成代谢反应释放能量的过程[1]。 异化作用将大分子（例如多糖、脂类、核酸和蛋白质）分解成更小的单元（例如分别为单糖、脂肪酸、核苷酸和氨基酸）。</p>
+</li>
+<li>
+<p>参考：
+<a href="https://zh.wikipedia.org/zh-cn/%E5%BC%82%E5%8C%96%E4%BD%9C%E7%94%A8">异化作用-Wiki</a></p>
+</li>
+</ul>
+<h3 id="随机双盲试验">随机双盲试验</h3>
+<ul>
+<li>
+<p>内容：
+双盲（double blind）是一种更加严格的试验方法，通常适用于以人为研究对象的试验（human subjects），旨在消除可能出现的试验者和参与者意识中的主观偏差（subjective bias）和个人偏好（personal preferences）。在大多数情况下，随机双盲试验要求达到非常高的科学严格程度。</p>
+<p>在随机双盲试验中：</p>
+<ol>
+<li>
+<p>试验者和参与者都不知道哪些参与者属于对照组（control group）、哪些属于试验组（experimental group）。只有在所有数据被记录完毕之后（在有些情况下是分析完毕之后），试验者才能知道哪些参与者属于哪些组。</p>
+</li>
+<li>
+<p>采用随机双盲试验是为了减少偏见（prejudices）和无意识地暗示（unintentional physical cues）对试验结果的影响。这种方法确保了试验结果的客观性和可靠性。</p>
+</li>
+<li>
+<p>随机分配（Random assignment）到对照组或者试验组是随机双盲试验中至关重要的一部分。确认哪些受试者属于哪些组的信息交由第三方保管，并且在研究结束之前不能告知研究者。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>参考：
+<a href="https://wiki.mbalib.com/wiki/%E5%8F%8C%E7%9B%B2%E8%AF%95%E9%AA%8C">双盲试验-MBA智库</a></p>
+</li>
+</ul>
+<h3 id="放射免疫分析">放射免疫分析</h3>
+<ul>
+<li>
+<p>内容：
+放射免疫分析（英语：radioimmunoassay，RIA）又称放射免疫测定，简称放免或放免法，是一种在无须采用生物测定方法的情况下，利用放射性核素示踪技术和免疫学抗原抗体特异性相结合，再通过测定放射性来分析体内微量成分的分析技术；用于检测抗原（例如血清之中激素的水平）的实验室测定方法。</p>
+</li>
+<li>
+<p>参考：
+<a href="https://zh.wikipedia.org/zh-cn/%E6%94%BE%E5%B0%84%E5%85%8D%E7%96%AB%E5%88%86%E6%9E%90">放射免疫分析-Wiki</a></p>
+</li>
+</ul>
+<h3 id="酶联免疫吸附测定">酶联免疫吸附测定</h3>
+<ul>
+<li>
+<p>内容：
+酶联免疫吸附测定（enzyme-linked immunosorbent assay，ELISA）又称酵素免疫分析法，简称酶联法、酶免，是利用抗原抗体之间专一性键结之特性，对检体进行检测的分析方法；由于结合于固体承载物(一般为塑胶孔盘)上的抗原或抗体仍可具有免疫活性，因此设计其键结机制后，配合酵素呈色反应，即可显示特定抗原或抗体是否存在，并可利用呈色的深浅进行定量分析。</p>
+</li>
+<li>
+<p>参考：
+<a href="https://zh.wikipedia.org/zh-cn/%E9%85%B6%E8%81%94%E5%85%8D%E7%96%AB%E5%90%B8%E9%99%84%E6%B5%8B%E5%AE%9A">酶联免疫吸附测定-Wiki</a></p>
+</li>
+</ul>
+<h3 id="激动剂">激动剂</h3>
+<ul>
+<li>
+<p>内容：
+激动剂（agonist）也称兴奋剂。能增强另一种分子活性、促进某种反应的药物、酶激动剂和激素一类的分子。激动剂是能增强另一种分子活性、促进某种反应的药物、酶激动剂和激素一类的分子。其与受体既有高亲和力，也有高内在活性，能与受体结合产生最大效应（ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">E_{max}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ma</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ），也称完全激动剂。</p>
+</li>
+<li>
+<p>参考：
+<a href="https://baike.baidu.com/item/%E6%BF%80%E5%8A%A8%E5%89%82/7318827">激动剂-百度百科</a></p>
+</li>
+</ul>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            <script async type="text/javascript">
+/* From extension marp-team.marp-vscode */
+(()=>{var U=Object.defineProperty;var d=($,E)=>U($,"name",{value:E,configurable:!0});(()=>{var $={676:(w,b,g)=>{w.exports=g(185)},185:(w,b)=>{"use strict";var g;g={value:!0};const x={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},k="data-marp-auto-scaling-wrapper",u="data-marp-auto-scaling-svg",c="data-marp-auto-scaling-container",T=class T extends HTMLElement{constructor(){super(),this.svgPreserveAspectRatio="xMinYMid meet";const s=d(i=>([n])=>{const{width:e,height:t}=n.contentRect;this[i]={width:e,height:t},this.updateSVGRect()},"t");this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(s("containerSize")),this.wrapperObserver=new ResizeObserver((...i)=>{s("wrapperSize")(...i),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){var s,i,n,e,t;this.shadowRoot.innerHTML=`
+<style>
+  svg[${u}] { display: block; width: 100%; height: auto; vertical-align: top; }
+  span[${c}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }
+</style>
+<div ${k}>
+  <svg part="svg" ${u}>
+    <foreignObject><span ${c}><slot></slot></span></foreignObject>
+  </svg>
+</div>
+    `.split(/\n\s*/).join(""),this.wrapper=(s=this.shadowRoot.querySelector(`div[${k}]`))!==null&&s!==void 0?s:void 0;const o=this.svg;this.svg=(n=(i=this.wrapper)===null||i===void 0?void 0:i.querySelector(`svg[${u}]`))!==null&&n!==void 0?n:void 0,this.svg!==o&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=(t=(e=this.svg)===null||e===void 0?void 0:e.querySelector(`span[${c}]`))!==null&&t!==void 0?t:void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:s}=this;s&&(s.style.display="inline",requestAnimationFrame(()=>{s.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(s){const i=d(()=>{const n=(()=>{const e=s.getPropertyValue("--preserve-aspect-ratio");return e?e.trim():`x${(({textAlign:t,direction:o})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if(t==="start"||t==="end"){let a=o==="rtl";return t==="end"&&(a=!a),a?"Max":"Min"}return"Mid"})(s)}YMid meet`})();n!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=n,this.updateSVGRect()),s===this.svgComputedStyle&&requestAnimationFrame(i)},"e");i()}updateSVGRect(){var s,i,n,e,t,o,a;let p=Math.ceil((i=(s=this.containerSize)===null||s===void 0?void 0:s.width)!==null&&i!==void 0?i:0);const h=Math.ceil((e=(n=this.containerSize)===null||n===void 0?void 0:n.height)!==null&&e!==void 0?e:0);this.dataset.downscaleOnly!==void 0&&(p=Math.max(p,(o=(t=this.wrapperSize)===null||t===void 0?void 0:t.width)!==null&&o!==void 0?o:0));const f=(a=this.svg)===null||a===void 0?void 0:a.querySelector(":scope > foreignObject");if(f?.setAttribute("width",`${p}`),f?.setAttribute("height",`${h}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${p} ${h}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=p<=0||h<=0?"0":""),this.container){const _=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=_.startsWith("xmid")||_.startsWith("xmax")?"auto":"0",this.container.style.marginRight=_.startsWith("xmi")?"auto":"0"}}};d(T,"s");let r=T;const m=d((l,{attrs:s={},style:i})=>class extends l{constructor(...n){super(...n);for(const[e,t]of Object.entries(s))this.hasAttribute(e)||this.setAttribute(e,t);this.attachShadow({mode:"open"})}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_update(){const n=i?`<style>:host { ${i} }</style>`:"";let e="<slot></slot>";const{autoScaling:t}=this.dataset;t!==void 0&&(e=`<marp-auto-scaling exportparts="svg:auto-scaling" ${t==="downscale-only"?"data-downscale-only":""}>${e}</marp-auto-scaling>`),this.shadowRoot.innerHTML=n+e}},"o");let v;const j=Symbol();let C;const z="marpitSVGPolyfill:setZoomFactor,",A=Symbol(),D=Symbol(),W=d(()=>{const l=navigator.vendor==="Apple Computer, Inc.",s=l?[B]:[],i={then:n=>(l?(async()=>{if(C===void 0){const e=document.createElement("canvas");e.width=10,e.height=10;const t=e.getContext("2d"),o=new Image(10,10),a=new Promise(p=>{o.addEventListener("load",()=>p())});o.crossOrigin="anonymous",o.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await a,t.drawImage(o,0,0),C=t.getImageData(5,5,1,1).data[3]<128}return C})().then(e=>{n?.(e?[B]:[])}):n?.([]),i)};return Object.assign(s,i)},"h");let H,O;function B(l){const s=typeof l=="object"&&l.target||document,i=typeof l=="object"?l.zoom:l;window[D]||(Object.defineProperty(window,D,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:e,origin:t})=>{if(t===window.origin)try{if(e&&typeof e=="string"&&e.startsWith(z)){const[,o]=e.split(","),a=Number.parseFloat(o);Number.isNaN(a)||(O=a)}}catch(o){console.error(o)}}));let n=!1;Array.from(s.querySelectorAll("svg[data-marpit-svg]"),e=>{var t,o,a,p;e.style.transform||(e.style.transform="translateZ(0)");const h=i||O||e.currentScale||1;H!==h&&(H=h,n=h);const f=e.getBoundingClientRect(),{length:_}=e.children;for(let F=0;F<_;F+=1){const S=e.children[F];if(S.getScreenCTM){const y=S.getScreenCTM();if(y){const I=(o=(t=S.x)===null||t===void 0?void 0:t.baseVal.value)!==null&&o!==void 0?o:0,Z=(p=(a=S.y)===null||a===void 0?void 0:a.baseVal.value)!==null&&p!==void 0?p:0,Y=S.children.length;for(let R=0;R<Y;R+=1){const N=S.children[R];if(N.tagName==="SECTION"){const{style:q}=N;q.transformOrigin||(q.transformOrigin=`${-I}px ${-Z}px`),q.transform=`scale(${h}) matrix(${y.a}, ${y.b}, ${y.c}, ${y.d}, ${y.e-f.left}, ${y.f-f.top}) translateZ(0.0001px)`;break}}}}}}),n!==!1&&Array.from(s.querySelectorAll("iframe"),({contentWindow:e})=>{e?.postMessage(`${z}${n}`,window.origin==="null"?"*":window.origin)})}d(B,"u");function P({once:l=!1,target:s=document}={}){const i=function(n=document){if(n[A])return n[A];let e=!0;const t=d(()=>{e=!1,delete n[A]},"i");Object.defineProperty(n,A,{configurable:!0,value:t});let o=[],a=!1;(async()=>{try{o=await W()}finally{a=!0}})();const p=d(()=>{for(const h of o)h({target:n});a&&o.length===0||e&&window.requestAnimationFrame(p)},"o");return p(),t}(s);return l?(i(),()=>{}):i}d(P,"v"),H=1,O=void 0;const G=P,M=Symbol(),L=d((l=document)=>{if(typeof window>"u")throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const t=window[j];t||customElements.define("marp-auto-scaling",r);for(const o of Object.keys(x)){const a=`marp-${o}`,p=x[o].proto();v!=null||(v=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is")),v&&p!==HTMLElement?t||customElements.define(a,m(p,{style:x[o].style}),{extends:o}):(t||customElements.define(a,m(HTMLElement,x[o])),e.querySelectorAll(`${o}[is="${a}"]`).forEach(h=>{h.outerHTML=h.outerHTML.replace(new RegExp(`^<${o}`,"i"),`<${a}`).replace(new RegExp(`</${o}>$`,"i"),`</${a}>`)}))}window[j]=!0})(l),l[M])return l[M];const s=P({target:l}),i=d(()=>{s(),delete l[M]},"n"),n=Object.assign(i,{cleanup:i,update:()=>L(l)});return Object.defineProperty(l,M,{configurable:!0,value:n}),n},"y");b.browser=L,g=L,g=G}},E={};function V(w){var b=E[w];if(b!==void 0)return b.exports;var g=E[w]={exports:{}};return $[w](g,g.exports,V),g.exports}d(V,"__webpack_require__");var J={};(()=>{"use strict";var w=V(676);function b(){let u,c;const r=d(()=>{const m=document.getElementById("__marp-vscode"),v=!!m;u!==v?(document.body.classList.toggle("marp-vscode",v),v?c=(0,w.browser)():(c?.cleanup(),c=void 0),u=v):v&&c?.update(),u?(m&&g(m),x()):k()},"updateCallback");window.addEventListener("load",()=>window.setTimeout(r,100)),window.addEventListener("vscode.markdown.updateContent",r),r()}d(b,"preview");const g=d(u=>{u.querySelectorAll("[is]").forEach(c=>{if(c.nodeName.includes("-")||document.createElement(c.nodeName).constructor!==c.constructor)return;const{outerHTML:m}=c;c.outerHTML=m,console.debug("[marp-vscode] Custom element has been upgraded forcibly:",m.slice(0,m.indexOf(">")+1||void 0))})},"forceUpgradeCustomElements"),x=d(()=>{const u=document.querySelectorAll("style:not(#__marp-vscode-style,#_defaultStyles,[data-marp-vscode-body])"),c=document.querySelectorAll('link[rel="stylesheet"][href]:not([href*="marp-vscode"])');u.forEach(r=>{r.closest("#__marp-vscode")||(r.dataset.marpVscodeBody=r.textContent??"",r.textContent="")}),c.forEach(r=>{if(r.closest("#__marp-vscode"))return;const{href:m}=r;r.dataset.marpVscodeHref=m,r.removeAttribute("href")})},"removeStyles"),k=d(()=>{const u=document.querySelectorAll("style[data-marp-vscode-body]"),c=document.querySelectorAll("link[data-marp-vscode-href]");u.forEach(r=>{r.textContent=r.dataset.marpVscodeBody||"",delete r.dataset.marpVscodeBody}),c.forEach(r=>{r.href=r.dataset.marpVscodeHref||"",delete r.dataset.marpVscodeHref})},"restoreStyles");b()})()})();})();
+
+</script>
+
+        </body>
+        </html>
